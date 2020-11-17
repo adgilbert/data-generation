@@ -1,0 +1,12 @@
+[submodule "1-model-extension"]
+	path = 1-model-extension
+	url = https://github.com/MaciejPMarciniak/CT_mesh_handling
+[submodule "2-pseudo-image-extraction"]
+	path = 2-pseudo-image-extraction
+	url = https://github.com/adgilbert/pseudo-image-extraction
+[submodule "3-image-transformation"]
+	path = 3-image-transformation
+	url = https://github.com/adgilbert/transformation
+[submodule "4-segmentation"]
+	path = 4-segmentation
+	url = https://github.com/adgilbert/med-seg
