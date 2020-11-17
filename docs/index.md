@@ -3,7 +3,7 @@ Anatomical Models: An Example with Echocardiography Segmentation"
 
 ## Abstract
 
-![Image](imgs/intro.PNG)
+![Image](./imgs/intro.PNG)
 Using anatomical models as high quality ground truth annotations, we propose a pipeline to generate large synthetic 
 datasets for training convolutional neural networks.
 
