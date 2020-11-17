@@ -1,37 +1,73 @@
-## Welcome to GitHub Pages
+This site provide links to data and code for the article "Generating Synthetic Labeled Data from Existing 
+Anatomical Models: An Example with Echocardiography Segmentation"
 
-You can use the [editor on GitHub](https://github.com/adgilbert/data-generation/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+## Abstract
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![Image](imgs/intro.PNG)
+Using anatomical models as high quality ground truth annotations, we propose a pipeline to generate large synthetic 
+datasets for training convolutional neural networks.
 
-### Markdown
+#### Motivation
+Deep learning can bring time savings and increased reproducibility to medical image analysis. However, acquiring 
+training data is challenging due to the time-intensive nature of labeling and high inter-observer variability in 
+annotations. Rather than labeling images, in this work we propose an alternative pipeline where images are generated 
+from existing high-quality annotations using generative adversarial networks (GANs). 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+#### Summary 
+Annotations are derived automatically from previously built anatomical models. 
+Annotations are transformed into realistic synthetic 
+ultrasound images with paired labels using a [CycleGAN](https://junyanz.github.io/CycleGAN/). 
+The pipeline developed is fully extensible to any segmentation or landmark detection task in any modality. 
 
-```markdown
-Syntax highlighted code block
+#### Results
+We demonstrate the pipeline by generating synthetic 2D echocardiography images to compare with existing deep learning 
+ultrasound segmentation datasets. A convolutional neural network is 
+trained to segment the left ventricle and left atrium using only synthetic images. 
+Networks trained with synthetic images produce accurate segmentations on real images with median Dice scores of 
+0.90, 0.89, and 0.88 for left ventricle segmentation of three different unseen datasets. 
+These results match or are better than inter-observer results measured on real ultrasound datasets and are 
+comparable to a network trained on a separate set of real images. 
 
-# Header 1
-## Header 2
-### Header 3
+#### Conclusion
 
-- Bulleted
-- List
+The proposed pipeline opens the door for automatic generation of training data for many tasks in medical imaging.
 
-1. Numbered
-2. List
+## Article
 
-**Bold** and _Italic_ and `Code` text
+The article is currently under review. A link will be provided here once published.
 
-[Link](url) and ![Image](src)
-```
+## Data
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Anatomical Models
 
-### Jekyll Themes
+The paper describing the construction of the cardiac anatomical models used in this article is currently under review. 
+A link will be provided here once published. 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/adgilbert/data-generation/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Articles such as 
+[(Strocchi et. al, 2020)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0235145), 
+[(Xu, 2014)](https://iopscience.iop.org/article/10.1088/0031-9155/59/18/R233),
+[(Gosselin et. al, 2014)](https://iopscience.iop.org/article/10.1088/0031-9155/59/18/5287), and
+[(Petoussi-Henss et. al, 2001)](https://iopscience.iop.org/article/10.1088/0031-9155/47/1/307) 
+among numerous others provide links for accesssing anatomical models of other anatomies. Most of these are free 
+for academic use.  
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Echocardiography
+
+Two publicly available echocardiography datasets were used for the evaluation of the pipeline, the 
+[Camus dataset](https://www.creatis.insa-lyon.fr/Challenge/camus/) and the 
+[EchoNet dataset](https://echonet.github.io/dynamic/). We would like to thank the authors 
+[(Leclerc et. al, 2019)](https://ieeexplore.ieee.org/abstract/document/8649738) and 
+[(Ouyang et. al, 2020)](https://www.nature.com/articles/s41586-020-2145-8) respectively for making these resources 
+available.
+
+[grand-challenge.org](https://grand-challenge.org/challenges/) provides an overview of several other open datasets in 
+biomedical imaging.
+
+## Code
+
+The code for extending the original model set using principle component analysis is 
+[online here](https://github.com/MaciejPMarciniak/CT_mesh_handling).
+
+The rest of the code-base is divided into three sections. They are split into three repositories because each part is 
+stand-alone, but all are linked as submodules here. 

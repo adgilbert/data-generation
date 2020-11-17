@@ -1,1 +1,3 @@
-theme: jekyll-theme-cayman
+theme: jekyll-theme-minimal
+title: "Generating Synthetic Labeled Data from Existing Anatomical Models: An Example with Echocardiography Segmentation"
+description: Andrew Gilbert, Maciej Marciniak, Cristobal Rodero, Pablo Lamata, Eigil Samset, Kristin McLeod
