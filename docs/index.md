@@ -2,122 +2,79 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+## Abstract
 
-[Link to another page](./another-page.html).
+#### Motivation
+Deep learning can bring time savings and increased reproducibility to medical image analysis. However, acquiring 
+training data is challenging due to the time-intensive nature of labeling and high inter-observer variability in 
+annotations. Rather than labeling images, in this work we propose an alternative pipeline where images are generated 
+from existing high-quality annotations using generative adversarial networks (GANs). 
 
-There should be whitespace between paragraphs.
+#### Summary 
+Annotations are derived automatically from previously built anatomical models. 
+Annotations are transformed into realistic synthetic 
+ultrasound images with paired labels using a [CycleGAN](https://junyanz.github.io/CycleGAN/). 
+The pipeline developed is fully extensible to any segmentation or landmark detection task in any modality. 
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+#### Results
+We demonstrate the pipeline by generating synthetic 2D echocardiography images to compare with existing deep learning 
+ultrasound segmentation datasets. A convolutional neural network is 
+trained to segment the left ventricle and left atrium using only synthetic images. 
+Networks trained with synthetic images produce accurate segmentations on real images with median Dice scores of 
+0.90, 0.89, and 0.88 for left ventricle segmentation of three different unseen datasets. 
+These results match or are better than inter-observer results measured on real ultrasound datasets and are 
+comparable to a network trained on a separate set of real images. 
 
-# Header 1
+#### Conclusion
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+The proposed pipeline opens the door for automatic generation of training data for many tasks in medical imaging.
 
-## Header 2
+## Article
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+The article is currently under review. A link will be provided here once published.
 
-### Header 3
+## Data
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+### Anatomical Models
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+The paper describing the construction of the cardiac anatomical models used in this article is currently under review. 
+A link will be provided here once published. 
 
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
+Articles such as 
+[(Strocchi et. al, 2020)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0235145), 
+[(Xu, 2014)](https://iopscience.iop.org/article/10.1088/0031-9155/59/18/R233),
+[(Gosselin et. al, 2014)](https://iopscience.iop.org/article/10.1088/0031-9155/59/18/5287), and
+[(Petoussi-Henss et. al, 2001)](https://iopscience.iop.org/article/10.1088/0031-9155/47/1/307) 
+among numerous others provide links for accesssing anatomical models of other anatomies. Most of these are free 
+for academic use.  
 
 
-### Definition lists can be used with HTML syntax.
+### Echocardiography
 
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
+Two publicly available echocardiography datasets were used for the evaluation of the pipeline, the 
+[Camus dataset](https://www.creatis.insa-lyon.fr/Challenge/camus/) and the 
+[EchoNet dataset](https://echonet.github.io/dynamic/). We would like to thank the authors 
+[(Leclerc et. al, 2019)](https://ieeexplore.ieee.org/abstract/document/8649738) and 
+[(Ouyang et. al, 2020)](https://www.nature.com/articles/s41586-020-2145-8) respectively for making these resources 
+available.
 
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
+[grand-challenge.org](https://grand-challenge.org/challenges/) provides an overview of several other open datasets in 
+biomedical imaging.
 
-```
-The final element.
-```
+## Code
+
+
+The code is divided into four distinct modules which are mostly independent. More information on the structure is
+contained [on the Github page](https://github.com/adgilbert/data-generation).
+
+
+## Authors
+
+Authors: Andrew Gilbert<sup>1,2</sup>, Maciej Marciniak<sup>3</sup>, Cristobal Rodero<sup>3</sup>, 
+Pablo Lamata<sup>3</sup>, Eigil Samset<sup>1,2</sup>, Kristin McLeod<sup>1</sup>
+
+1: GE Vingmed Ultrasound, Horten, NO
+
+2: University of Oslo, Oslo, NO
+
+3: King's College London, London, UK
