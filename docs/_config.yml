@@ -1,6 +1,5 @@
-title: Minimal theme
-logo: /assets/img/logo.png
-description: Minimal is a theme for GitHub Pages.
-show_downloads: true
-google_analytics:
+title: "Generating Synthetic Labeled Data from Anatomical Models"
+logo: /assets/img/intro.png
+description: Using anatomical models as high quality ground truth annotations, we propose a pipeline to generate large synthetic
+  datasets for training convolutional neural networks.
 theme: jekyll-theme-minimal
