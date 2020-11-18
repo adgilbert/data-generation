@@ -1,3 +1,6 @@
 theme: jekyll-theme-minimal
-title: "Generating Synthetic Labeled Data from Existing Anatomical Models: An Example with Echocardiography Segmentation"
-description: Andrew Gilbert, Maciej Marciniak, Cristobal Rodero, Pablo Lamata, Eigil Samset, Kristin McLeod
+title: "Generating Synthetic Labeled Data from Anatomical Models"
+description: Using anatomical models as high quality ground truth annotations, we propose a pipeline to generate large synthetic
+  datasets for training convolutional neural networks.
+logo: ./imgs/intro.png
+show_downloads: "true"

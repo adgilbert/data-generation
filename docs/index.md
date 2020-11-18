@@ -1,11 +1,4 @@
-This site provide links to data and code for the article "Generating Synthetic Labeled Data from Existing 
-Anatomical Models: An Example with Echocardiography Segmentation"
-
 ## Abstract
-
-![Image](./imgs/intro.PNG)
-Using anatomical models as high quality ground truth annotations, we propose a pipeline to generate large synthetic 
-datasets for training convolutional neural networks.
 
 #### Motivation
 Deep learning can bring time savings and increased reproducibility to medical image analysis. However, acquiring 
@@ -66,8 +59,18 @@ biomedical imaging.
 
 ## Code
 
-The code for extending the original model set using principle component analysis is 
-[online here](https://github.com/MaciejPMarciniak/CT_mesh_handling).
 
-The rest of the code-base is divided into three sections. They are split into three repositories because each part is 
-stand-alone, but all are linked as submodules here. 
+The code is divided into four distinct modules which are mostly independent. More information on the structure is
+contained [on the Github page](https://github.com/adgilbert/data-generation).
+
+
+## Authors
+
+Authors: Andrew Gilbert<sup>1,2</sup>, Maciej Marciniak<sup>3</sup>, Cristobal Rodero<sup>3</sup>, 
+Pablo Lamata<sup>3</sup>, Eigil Samset<sup>1,2</sup>, Kristin McLeod<sup>1</sup>
+
+1: GE Vingmed Ultrasound, Horten, NO
+
+2: University of Oslo, Oslo, NO
+
+3: King's College London, London, UK
