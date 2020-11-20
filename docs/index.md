@@ -6,28 +6,26 @@ layout: default
 
 #### Motivation
 Deep learning can bring time savings and increased reproducibility to medical image analysis. However, acquiring 
-training data is challenging due to the time-intensive nature of labeling and high inter-observer variability in 
-annotations. Rather than labeling images, in this work we propose an alternative pipeline where images are generated 
-from existing high-quality annotations using generative adversarial networks (GANs). 
+training data is challenging due to the time-intensive nature of labeling and high inter-observer variability 
+in annotations. Rather than labeling images, in this work we propose an alternative pipeline where images are 
+generated from existing high-quality annotations using generative adversarial networks (GANs).
 
 #### Summary 
-Annotations are derived automatically from previously built anatomical models. 
-Annotations are transformed into realistic synthetic 
-ultrasound images with paired labels using a [CycleGAN](https://junyanz.github.io/CycleGAN/). 
-The pipeline developed is fully extensible to any segmentation or landmark detection task in any modality. 
-
-#### Results
-We demonstrate the pipeline by generating synthetic 2D echocardiography images to compare with existing deep learning 
-ultrasound segmentation datasets. A convolutional neural network is 
-trained to segment the left ventricle and left atrium using only synthetic images. 
-Networks trained with synthetic images produce accurate segmentations on real images with median Dice scores of 
-0.90, 0.89, and 0.88 for left ventricle segmentation of three different unseen datasets. 
+Annotations are derived automatically from previously built anatomical models and are transformed into realistic 
+synthetic ultrasound images with paired labels using a [CycleGAN](https://junyanz.github.io/CycleGAN/). 
+We demonstrate the pipeline by generating 
+synthetic 2D echocardiography images to compare with existing deep learning ultrasound segmentation datasets. 
+A convolutional neural network is trained to segment the left ventricle and left atrium using only synthetic images.
+Networks trained with synthetic images were extensively tested on four different unseen datasets of real images with 
+median Dice scores of 91, 90, 88, and 87 for left ventricle segmentation. 
 These results match or are better than inter-observer results measured on real ultrasound datasets and are 
-comparable to a network trained on a separate set of real images. 
+comparable to a network trained on a separate set of real images. Results demonstrate the images produced can 
+effectively be used in place of real data for training.
 
 #### Conclusion
 
-The proposed pipeline opens the door for automatic generation of training data for many tasks in medical imaging.
+The proposed pipeline opens the door for automatic generation of training data for many tasks in medical 
+imaging as the same process can be applied to other segmentation or landmark detection tasks in any modality. 
 
 ## Article
 
@@ -45,8 +43,8 @@ Articles such as
 [(Xu, 2014)](https://iopscience.iop.org/article/10.1088/0031-9155/59/18/R233),
 [(Gosselin et. al, 2014)](https://iopscience.iop.org/article/10.1088/0031-9155/59/18/5287), and
 [(Petoussi-Henss et. al, 2001)](https://iopscience.iop.org/article/10.1088/0031-9155/47/1/307) 
-among numerous others provide links for accesssing anatomical models of other anatomies. Most of these are free 
-for academic use.  
+among numerous others provide links for accessing anatomical cardiac models and/or models of other anatomies. 
+Most of these are free for academic use.  
 
 
 ### Echocardiography
