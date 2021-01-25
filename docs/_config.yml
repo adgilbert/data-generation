@@ -1,4 +1,4 @@
-title: "Generating Synthetic Labeled Data from Anatomical Models"
+title: "Generating Synthetic Labeled Data from Existing Anatomical Models"
 logo: /assets/img/intro.png
 description: Using anatomical models as high quality ground truth annotations, we propose a pipeline to generate large synthetic
   datasets for training convolutional neural networks.

@@ -29,7 +29,18 @@ imaging as the same process can be applied to other segmentation or landmark det
 
 ## Article
 
-The article is currently under review. A link will be provided here once published.
+The article is available [online here](https://ieeexplore.ieee.org/document/9324763). 
+
+Citation: 
+
+A. Gilbert, M. Marciniak, C. Rodero, P. Lamata, E. Samset, and K. McLeod, "Generating Synthetic Labeled Data from
+Existing Anatomical Models: An Example with Echocardiography Segmentation", *IEEE Trans. Med. Imaging*, 2021. 
+doi: 10.1109/TMI.2021.3051806.
+
+
+## Supplementary Materials
+
+Appendices referenced in the article are [available here](https://github.com/adgilbert/data-generation/blob/main/SupplementaryMaterial.pdf)
 
 ## Data
 
