@@ -3,6 +3,8 @@
 Repository for code from the paper:
 "Generating Synthetic Labeled Data from Existing Anatomical Models: An Example with Echocardiography Segmentation"
 
+The anatomical models are available here:  https://zenodo.org/record/4590294#.YbfgcdDMLD4
+
 
 ## Overview
 
