@@ -12,6 +12,14 @@ This repository is divided into 4 different submodules. The repository is struct
 pieces is mostly stand-alone. This allows the pieces to be used individually in other contexts and to replace pieces
 as the state-of-the-art changes. 
 
+### Initializing submodules
+
+After git cloning the repository an additional step is required to collect the submodules:
+```
+git submodule init
+git submodule update
+```
+
 
 An overview of each piece is given below. See the individual repositories for more information.
 
